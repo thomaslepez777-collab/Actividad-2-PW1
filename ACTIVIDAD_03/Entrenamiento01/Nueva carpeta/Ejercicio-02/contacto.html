@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="styles-2.css">
 </head>
 
 <body>
@@ -13,8 +15,32 @@
             <a href="index.html">HOME</a> | <a href="contacto.html">CONTACTO</a>
         </nav>
     </header>
+    <h1>Contacto</h1>
     <main>
+<form action="#" method="post" class="Formulario-de-contacto">
+<div class="campo">
+<label for="Nombre">Nombre</label>
+<input type="text" id="Nombre" name="Nombre" required> 
+</div>
 
+<div class="campo">
+<label for="email">E-mail</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<div class="campo">
+<label for="telefono">Telefono</label>
+<input type="tel" id="telefono" name="telefono" required>
+</div>
+<div class="campo">
+<label for="mensaje">Mensaje</label>
+<input type="text" id="mensaje" name="mensaje" required>
+</div>
+<div class="botones">
+<button type="submit" class="boton-enviar">Enviar</button>
+<button type="reset" class="boton-cancelar">Cancelar</button>
+</div>
+</form>
     </main>
     <footer class="footer-fijo">
         <p>Todos los derechos reservados</p>

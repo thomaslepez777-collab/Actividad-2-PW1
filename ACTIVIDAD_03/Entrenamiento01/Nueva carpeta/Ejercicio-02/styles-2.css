@@ -1,0 +1,132 @@
+/* 1. RESET Y CONFIGURACIÓN BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido al 80% horizontalmente */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el scroll lateral */
+}
+
+/* 2. HEADER Y FOOTER FIJOS (10% de alto cada uno) */
+.header-fijo, .footer-fijo {
+    position: fixed;
+    width: 80%; /* Ocupan el 80% del ancho */
+    height: 10vh; /* 10% del alto de la pantalla */
+    background-color: white;
+    border: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header-fijo { top: 0; }
+.footer-fijo { bottom: 0; }
+
+.header-fijo nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+/* 3. CONTENIDO PRINCIPAL (80% del alto restante) */
+main, .contenido-principal {
+    width: 80%;
+    margin-top: 10vh;    /* Para que empiece después del header */
+    margin-bottom: 10vh; /* Para que termine antes del footer */
+    height: 80vh;        /* El 80% central */
+    overflow-y: auto;    /* Habilita el scroll vertical interno */
+    padding: 2rem;
+    border-left: 0.1rem solid black;
+    border-right: 0.1rem solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 4. ESTILOS DE LAS TARJETAS DE RECETAS */
+.tarjeta-receta {
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contenedor-foto {
+    width: 100%;
+    height: 30vh;
+    margin: 1.5rem 0;
+    border: 0.1rem solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contenedor-foto img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 5. ESTILOS DEL FORMULARIO DE CONTACTO */
+.Formulario-de-contacto {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border: 0.1rem solid gray;
+}
+
+.campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    font-weight: bold;
+    width: 30%;
+}
+
+.campo input {
+    width: 65%;
+    padding: 0.5rem;
+    border: 0.1rem solid #ccc;
+}
+
+/* Estilo para los botones del formulario */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.boton-enviar {
+    background-color: lightblue;
+    padding: 0.7rem 2rem;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.boton-cancelar {
+    background-color: lightpink;
+    padding: 0.7rem 2rem;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
