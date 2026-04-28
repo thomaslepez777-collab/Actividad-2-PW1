@@ -1,4 +1,3 @@
-/* 1. RESET Y CONFIGURACIÓN BASE */
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +9,17 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido al 80% horizontalmente */
+    align-items: center;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Evita el scroll lateral */
+    overflow-x: hidden;
 }
 
-/* 2. HEADER Y FOOTER FIJOS (10% de alto cada uno) */
-.header-fijo, .footer-fijo {
+
+.header-fijo,
+.footer-fijo {
     position: fixed;
-    width: 80%; /* Ocupan el 80% del ancho */
-    height: 10vh; /* 10% del alto de la pantalla */
+    width: 80%;
+    height: 10vh;
     background-color: white;
     border: 0.1rem solid black;
     display: flex;
@@ -28,8 +28,13 @@ body {
     z-index: 1000;
 }
 
-.header-fijo { top: 0; }
-.footer-fijo { bottom: 0; }
+.header-fijo {
+    top: 0;
+}
+
+.footer-fijo {
+    bottom: 0;
+}
 
 .header-fijo nav a {
     text-decoration: none;
@@ -38,13 +43,14 @@ body {
     margin: 0 1rem;
 }
 
-/* 3. CONTENIDO PRINCIPAL (80% del alto restante) */
-main, .contenido-principal {
+
+main,
+.contenido-principal {
     width: 80%;
-    margin-top: 10vh;    /* Para que empiece después del header */
-    margin-bottom: 10vh; /* Para que termine antes del footer */
-    height: 80vh;        /* El 80% central */
-    overflow-y: auto;    /* Habilita el scroll vertical interno */
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
+    overflow-y: auto;
     padding: 2rem;
     border-left: 0.1rem solid black;
     border-right: 0.1rem solid black;
@@ -55,7 +61,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-/* 4. ESTILOS DE LAS TARJETAS DE RECETAS */
+
 .tarjeta-receta {
     border: 0.1rem solid black;
     border-radius: 2rem;
@@ -80,7 +86,6 @@ h1 {
     object-fit: cover;
 }
 
-/* 5. ESTILOS DEL FORMULARIO DE CONTACTO */
 .Formulario-de-contacto {
     max-width: 80%;
     margin: 0 auto;
@@ -107,7 +112,6 @@ h1 {
     border: 0.1rem solid #ccc;
 }
 
-/* Estilo para los botones del formulario */
 .botones {
     display: flex;
     justify-content: center;
